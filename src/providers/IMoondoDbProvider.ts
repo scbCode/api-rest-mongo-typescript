@@ -1,4 +1,4 @@
-import config from "../config/config.ts";
+import config from "../config/config";
 
 const mongoose = require('mongoose');
 

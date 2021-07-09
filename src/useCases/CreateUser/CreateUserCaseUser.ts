@@ -2,7 +2,7 @@ import User from "../../entities/User";
 import { IUsersRepository } from "../../repository/IUsersRepository";
 import { ICreateUserDTO } from "./CreateUserDTO";
 import crypto from 'crypto'
-import config from "../../config/config.ts";
+import config from "../../config/config";
 
 export  class CreateUserCaseUsers {
 
@@ -12,7 +12,7 @@ export  class CreateUserCaseUsers {
 
     async execute(data: ICreateUserDTO){
 
-      const hash = crypto.createHmac('sha256', config.secret )
+      const hash = crypto.createHmac('sha256', config.secret)
         .update(data.senha)
         .digest('hex');
         
