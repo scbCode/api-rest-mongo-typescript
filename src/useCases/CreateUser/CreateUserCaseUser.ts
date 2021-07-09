@@ -2,7 +2,7 @@ import User from "../../entities/User";
 import { IUsersRepository } from "../../repository/IUsersRepository";
 import { ICreateUserDTO } from "./CreateUserDTO";
 import crypto from 'crypto'
-import config from "../../config/config";
+import config from "../../config/config.ts";
 
 export  class CreateUserCaseUsers {
 
