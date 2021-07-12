@@ -1,5 +1,5 @@
-config/
+src/config/
 package.json/
 yarn-error.log/
 yarn.lock/
-node_modules/
+src/node_modules/
