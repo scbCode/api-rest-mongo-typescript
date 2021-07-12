@@ -26,7 +26,7 @@ describe("Teste API login",function(){
           
           expect(response.statusCode).to.equal(200);
           if( _body.should.have.property('user') ){
-            expect(_body.cards).to.h
+            expect(_body.cards).to.have.property('user').with.lengthOf(2);
           }
   
           done(); // avisamos o test runner que acabamos a validacao e ja pode proseeguir
