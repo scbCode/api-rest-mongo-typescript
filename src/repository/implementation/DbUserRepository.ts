@@ -6,8 +6,8 @@ import config from "../../config/config";
 
 export class DbUserRepository {
 
-    async findByEmail(nome: string): Promise<mongoose.Document> {
-        const u = await User.findOne({nome:nome})
+    async findByEmail(email: string): Promise<mongoose.Document> {
+        const u = await User.findOne({email:email},{ _id: 0 ,__v:0,senha:0})
         console.log(u)
         return u
     }
