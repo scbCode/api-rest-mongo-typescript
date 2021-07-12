@@ -13,7 +13,7 @@ export class FindUserController {
         try {
 
           const user =   await this.findUserUseCase.execute( request.params.email)
-          console.log()
+          console.log("findEmail")
               
             return response.status(200).send({user});
              
