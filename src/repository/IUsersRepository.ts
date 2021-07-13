@@ -4,7 +4,7 @@ import * as mongoose from 'mongoose';
 export interface IUsersRepository {
 
  findByEmail(nome:string): Promise<mongoose.Document>;
- register(nome: string,email:string,senha:string): Promise<void>;
+ register(nome: string,email:string,senha:string): Promise<mongoose.Document>;
  login(email:string,senha:string): Promise<mongoose.Document>;
 
 }

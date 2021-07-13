@@ -18,7 +18,7 @@ export class CreateUserController {
              
         }catch (err){
 
-            return response.status(400).json({
+            return response.status(404).json({
                 message: err.message || 'Erro inesperado'
             });
 

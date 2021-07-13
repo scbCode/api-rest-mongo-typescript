@@ -2,4 +2,4 @@ src/config/
 package.json/
 yarn-error.log/
 yarn.lock/
-src/node_modules/
+node_modules/
