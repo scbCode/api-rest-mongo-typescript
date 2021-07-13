@@ -19,7 +19,9 @@ export class LoginUserController {
           var token:string;
               
           if (user) {
-               token = jwt.sign({ userId: user._id }, config.secret);
+               token = jwt.sign({ userId: user._id }, "Stack", {
+                    expiresIn: '365d' 
+               }, config.secret);
                return response.status(200).send({status:true,token:token});
           } else
           return response.status(200).send({status:false});

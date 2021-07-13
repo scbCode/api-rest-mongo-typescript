@@ -1,3 +1,4 @@
+import { verify } from "crypto";
 import { Router } from "express";
 import { createUserController } from "./useCases/CreateUser";
 import { findUserController  } from "./useCases/FindUser";
@@ -14,7 +15,7 @@ router.post('/login',(req,res)=>{
     return loginUserController.handle(req,res)
 })
 
-router.get('/user/:email',(req,res)=>{
+router.get('/user/:email',middleware.verifyJWT,(req,res)=>{
     return findUserController .handle(req,res)
 })
 
